@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var article-one = {
+var articleOne = {
     title : 'Article-one' ,
    
     content:  `  
@@ -20,7 +20,9 @@ var article-one = {
         
     </p>  `
 };
-
+function createTemplate(data) {
+    var title=data.title;
+    var content = data.content;
 var htmlTemplate = `<html>
 <head> <link href="/ui/style.css" rel="stylesheet" />
 <title>
@@ -38,19 +40,15 @@ ${title}</title>
 </div>
 </body>
 </html>
-
-
-
-
-
 `;
-
+return htmlTemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, '/', 'article-one.html'));
+ res.send(createTemplate(articleOne));
 });
 app.get('/article-three', function (req, res) {
   res.send('Article three requested and will be served here');
