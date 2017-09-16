@@ -36,7 +36,7 @@ var articles= {
     </p>  `
 },
 'article-three' :{
-    title : 'Article-Three' ,
+    title : 'Article-three' ,
    
     content:  `  
             <p>
