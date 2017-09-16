@@ -44,6 +44,12 @@ var nameInput=document.getElementById('name');
 var name = nameInput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick= function(){
+    var request = new XMLHttpRequest();
+    //capture the response time and store it in a variable
+    request.onreadystatechange = function (){
+        if(request.readyState===XMLHttpRequest.DONE) {
+            //take some action
+            if(request.status===200){
   //makearequestto the server and send the name capture a nnamelist and render it as the list  
   var names=['name1','name2','name3'];
   var list ='';
@@ -52,4 +58,12 @@ submit.onclick= function(){
   }
   var ul=document.getElementById('namelist');
   ul.innerHTML=list;
+            }
+        }
+        //not done
+    };
+    //make request
+    request.open('GET','http://albarvasi21.imad.hasura-app.io/submit-name?name='+name,true);
+    request.send(null);
+    
 };
