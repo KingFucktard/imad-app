@@ -64,7 +64,7 @@ ${title}</title>
     <a href="/">Home </a>
     </div>
     <hr/>
-    <h3>This is article one
+    <h3>This is article 
     </h3>
     ${content}
 </div>
