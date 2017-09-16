@@ -48,7 +48,7 @@ var articles= {
             mystery
         
     </p>  `
-},
+}
 };
 function createTemplate(data) {
     var title=data.title;
