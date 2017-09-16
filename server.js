@@ -6,6 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
+var articles= {
 var articleOne = {
     title : 'Article-one' ,
    
@@ -19,6 +20,35 @@ var articleOne = {
             mystery
         
     </p>  `
+};
+var articleTwo ={
+    title : 'Article-Two' ,
+   
+    content:  `  
+            <p>
+        
+            Everything 
+            is 
+            just 
+            a 
+            mystery
+        
+    </p>  `
+};
+var articleThree = {
+    title : 'Article-Three' ,
+   
+    content:  `  
+            <p>
+        
+            Everything 
+            is 
+            just 
+            a 
+            mystery
+        
+    </p>  `
+};
 };
 function createTemplate(data) {
     var title=data.title;
