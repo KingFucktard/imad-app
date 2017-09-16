@@ -40,9 +40,9 @@ button.onclick=function(){
     
 };
 //submit name
-var nameInput=document.geetElemenntById('name');
+var nameInput=document.getElementById('name');
 var name = nameInput.value;
-var submit=document.geetElemenntById('submit_btn');
+var submit=document.getElementById('submit_btn');
 submit.onclick= function(){
   //makearequestto the server and send the name capture a nnamelist and render it as the list  
   var names=['name1','name2','name3'];
