@@ -23,6 +23,9 @@ button.onclick=function(){
     //make arequest to countr endpoint
     var request = new XMLHttpRequest();
     //capture the response time and store it in a variable
+    request.onreadystatechange= function (){
+        if(request.readystate==XmlHttpRequest.DONE)
+    }
     //render the variable in correct span
     counter = counter +1;
     var span=document.getElementById('count');
