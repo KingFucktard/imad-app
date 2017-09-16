@@ -45,7 +45,7 @@ var articles= {
             is 
             just 
             a 
-            mystery
+            mystery in 3
         
     </p>  `
 }
