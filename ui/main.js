@@ -4,8 +4,14 @@ var element = document.getElementById('main-text');
 element.innerHTML='sab kuch naya';
 //move the image
 var img= document.getElementById('madi');
+var marginLeft=0;
+function moveRight () {
+    marginLeft = matginLeft+10;
+    img.style.marginLeft=marginLeft+'px';
+    
+}
 img.onclick =function() {
-    var interval = setInterval(moveleft,100);
+    var interval = setInterval(moveright,100);
     //img.style.marginLeft='1000px';
-    img.style.marginRight='1000px';
+    //img.style.marginRight='1000px';
 }
