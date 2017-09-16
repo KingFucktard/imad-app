@@ -51,7 +51,8 @@ submit.onclick= function(){
             //take some action
             if(request.status===200){
   //makearequestto the server and send the name capture a nnamelist and render it as the list  
-  var names=['name1','name2','name3'];
+  var names=request.responseText;
+  names=JSON.parse(names);
   var list ='';
   for(var i=0;i<names.length;i++){
       list +='<li>'+names[i]+ '</li>';
