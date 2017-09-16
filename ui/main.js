@@ -16,3 +16,14 @@ img.onclick =function() {
     //img.style.marginRight='1000px';
     
 };
+//counter code
+var button = document.getElementById('counter');
+var counter = 0;
+button.onclick=function(){
+    //make arequest to countr endpoint
+    //capture the response time and store it in a variable
+    //render the variable in correct span
+    counter = counter +1;
+    var span=document.getElementById('count');
+     span.innerHTML=counter.toString();
+};
